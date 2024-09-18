@@ -1,7 +1,20 @@
-.rodape{
-    background-color: black;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.rodape {
+  position: relative;
+  display: inline-block;
+}
+
+.rodape img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.rodape h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }

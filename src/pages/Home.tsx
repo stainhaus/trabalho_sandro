@@ -89,6 +89,7 @@ export default function Home() {
 
                 </nav>
             </header>
+
             <section id="hero">
                 <span className="desktop-only">
                     <img src={HeroRectangleTwo} alt="Retangulo um tela inicial" />
@@ -96,11 +97,10 @@ export default function Home() {
                 <img src={HeroRectangleOne} alt="Retangulo dois tela inicial" />
 
                 <div className="container content">
-                    <h1 className="desktop-only">
+                    <h1 className="tittle">
                         SERVIÇOS AUTOMOTIVOS EM GERAL
                     </h1>
-                    <h1></h1>
-                    <p> Serviços automotivos com garantia e segurança, trazendo o maior conforto ao cliente na hora da manutenção
+                    <p> Serviços automotivos com garantia e segurança
                     </p>
                     <div className="flex gap-1">
                         <span><Button text="Cadastre-se" /></span>
@@ -108,11 +108,7 @@ export default function Home() {
                             <Button text="Veja mais" secondary />
                         </span>
                     </div>
-
-
                 </div>
-
-
             </section>
 
             <div className="content-cards">
@@ -133,10 +129,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="rodape">
-                        <p>suporte</p>
-                        <h1>ola</h1>
-            </div>
+
         </>
     )
 }

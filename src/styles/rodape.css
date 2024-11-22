@@ -1,20 +1,56 @@
-.rodape {
-  position: relative;
-  display: inline-block;
+.footer {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  gap: 100px;
+  flex-direction: row;
+  padding: 20px; /* Adiciona espaçamento interno */
+  box-sizing: border-box;
 }
 
-.rodape img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.rodape h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+.footer h3 {
+  text-align: left;
+  margin-bottom: 25px;
+  color: rgb(255, 255, 255);
   font-size: 2rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 4px rgba(63, 57, 57, 0.7);
+}
+
+.footer p {
+  text-align: left;
+  margin-bottom: 3px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; 
+    height: auto; 
+    gap: 30px; 
+  }
+
+  .footer h3 {
+    font-size: 1.8rem;
+    text-align: center; 
+  }
+
+  .footer p {
+    text-align: center; 
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 15px; 
+  }
+
+  .footer h3 {
+    font-size: 1.5rem; 
+  }
+
+  .footer p {
+    font-size: 0.9rem; 
+  }
 }

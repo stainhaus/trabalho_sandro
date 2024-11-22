@@ -1,32 +1,30 @@
-/* Remove a rolagem horizontal globalmente */
+
 html, body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Garante que não haja rolagem horizontal */
-    height: 100%; /* Garante que o body ocupe toda a altura da viewport */
+    overflow-x: hidden;
+    height: 100%; 
 }
 
 /* Seção hero */
 #hero {
     background: var(--light-gray);
     border-top: 0.125rem solid #e4e4e4;
-    min-height: 90vh; /* Garantir que a altura seja flexível */
+    min-height: 90vh; 
     display: flex;
     position: relative;
-    overflow: hidden; /* Garante que não haja rolagem horizontal interna */
+    overflow: hidden; 
 }
 
-/* Imagem dentro da seção hero */
 #hero > img {
     position: absolute;
     right: 0;
     height: 60%;
-    max-width: 100%; /* Limita a largura da imagem à viewport */
+    max-width: 100%; 
     padding-left: 30%;
-    object-fit: cover; /* Garante que a imagem se ajuste corretamente */
+    object-fit: cover; 
 }
 
-/* Conteúdo dentro da seção hero */
 #hero .content {
     z-index: 1;
     display: flex;
@@ -36,14 +34,12 @@ html, body {
     gap: 1.75rem;
 }
 
-/* Ajuste de layout do conteúdo */
 #hero .content > div {
     width: fit-content;
     align-self: center;
     margin-bottom: 20%;
 }
 
-/* Ajustes para telas maiores que 1280px */
 @media (min-width: 1280px) {
     #hero {
         background: var(--bg-color);
@@ -57,7 +53,6 @@ html, body {
     }
 }
 
-/* Ajustes de conteúdo */
 .content p {
     width: 80%;
     align-self: center;
@@ -81,7 +76,6 @@ html, body {
     margin-top: 100px;
 }
 
-/* Ajustes para telas menores que 768px */
 @media (max-width: 768px) {
     #hero {
         min-height: 100vh;

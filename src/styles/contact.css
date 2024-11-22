@@ -1,0 +1,93 @@
+.contact {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.contact p {
+  font-size: 22px;
+}
+
+.form {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.input {
+  width: 600px;
+  height: 50px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.input2 {
+  width: 600px;
+  height: 200px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  resize: none; /* Evita redimensionamento manual se for um textarea */
+}
+
+.enviar {
+  background-color: black;
+  color: white;
+  border-radius: 12px;
+  width: 140px;
+  height: 50px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer; /* Adiciona um cursor pointer para destacar o botão */
+}
+
+/* Responsividade */
+
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+  .input, .input2 {
+      width: 90%; /* Usa 90% da largura da tela */
+      height: auto; /* Ajusta a altura automaticamente */
+  }
+
+  .input2 {
+      height: 150px; /* Reduz a altura específica em telas médias */
+  }
+
+  .enviar {
+      width: 120px; /* Reduz largura do botão */
+      height: 45px; /* Reduz altura do botão */
+      font-size: 14px; /* Ajusta o tamanho da fonte */
+  }
+
+  .contact p {
+      font-size: 18px;
+  }
+}
+
+/* Para telas menores que 480px */
+@media (max-width: 480px) {
+  .input, .input2 {
+      width: 100%; /* Usa 100% da largura da tela */
+  }
+
+  .input2 {
+      height: 120px; /* Reduz ainda mais a altura */
+  }
+
+  .enviar {
+      width: 100px; /* Botão menor */
+      height: 40px;
+      font-size: 12px; /* Fonte menor para o texto */
+  }
+
+  .contact p {
+      font-size: 16px;
+  }
+}

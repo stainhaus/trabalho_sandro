@@ -2,83 +2,110 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    gap: 100px;
+    min-height: 100vh; 
+    gap: 50px;
     flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .content-cards h1 {
     color: rgb(0, 0, 0);
+    text-align: center;
 }
 
 .cards {
     background-color: rgb(255, 255, 255);
     padding: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 80px;
-    flex-wrap: wrap; /* Permite que as cartas se organizem em linhas conforme o espaço */
+    gap: 50px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
 }
 
 .card {
     background-color: #e2dfdf;
     padding: 20px;
     width: 300px;
-    height: 300px;
+    max-width: 90%;
+    height: auto; 
     border-radius: 10px;
-    align-items: center;
     text-align: center;
-    justify-content: center;
-    font-style: normal;
-    color: rgb(0, 0, 0);
     display: flex;
-    gap: 35px;
     flex-direction: column;
+    align-items: center; 
+    justify-content: space-between; 
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.404);
+    gap: 15px; 
 }
 
 .img-cards {
-    width: 150px;
-    height: 150px;
+    width: 50%; 
+    max-width: 120px; 
+    height: auto;
     border-radius: 30%;
     filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.418));
+    object-fit: cover; 
 }
 
-/* Responsividade */
+.card h3, .card p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
 
-/* Para telas menores que 1024px */
 @media (max-width: 1024px) {
     .cards {
-        gap: 50px; /* Diminui o espaçamento entre as cartas */
+        gap: 30px;
+        padding: 10px;
     }
 
     .card {
         width: 250px;
-        height: 250px; /* Reduz o tamanho das cartas */
-    }
-
-    .img-cards {
-        width: 120px;
-        height: 120px; /* Reduz o tamanho das imagens */
-    }
-}
-
-/* Para telas menores que 768px */
-@media (max-width: 768px) {
-    .cards {
-        flex-direction: column; /* Cartas empilhadas em coluna */
-        gap: 30px; /* Menos espaço entre elas */
-    }
-
-    .card {
-        width: 80%; /* Ocupa maior parte da largura da tela */
         height: auto;
     }
 
     .img-cards {
-        width: 100px;
-        height: 100px; /* Ajuste nas imagens para caber melhor em telas menores */
+        width: 60%;
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .img-cards {
+        width: 50%;
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-cards {
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .img-cards {
+        width: 40%;
+        max-width: 60px;
     }
 }
